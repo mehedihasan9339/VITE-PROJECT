@@ -1,14 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import User, {Profile, Settings, userKey} from "./User.jsx";
+import User, { Profile, Settings, userKey } from "./User.jsx";
 import { UserComponent } from "./UserComponent.jsx";
 
 function App() {
+  const username = "Mehedi Hasan";
+
+  let x = 90;
+  let y = 10;
+
   return (
     <>
-      <h1>Mehedi Hasan</h1>
+      <h1>{username}</h1>
+      <h1>{x + y}</h1>
+      <h1>{x + y === 100 ? "True" : "False"}</h1>
+      <button onClick={() => alert("Button Clicked!")}>Click Here</button>
       <User />
       <Profile />
       <Settings />
